@@ -1,6 +1,6 @@
 # 2048(vanilla js)
 
-[DEMO](https://mines-weeper.vercel.app/)
+[DEMO](https://2048-fake-cat.vercel.app/)
 
 #### Controls: W or ↑ - move cells up, S or ↓ - move cells down, D or → - move cells right, A or ← - move cells left.
 
