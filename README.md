@@ -6,7 +6,7 @@
 
 #### Preview
 <div style="display:flex; justify-content:space-beetween;">
-  <img src="https://github.com/Fake-Cat/2048/blob/master/img/preview.jpeg" width="300">
-  <img src="https://github.com/Fake-Cat/2048/blob/master/img/win.jpeg" width="300">
-  <img src="https://github.com/Fake-Cat/2048/blob/master/img/lose.jpeg" width="300">
+  <img src="https://github.com/Fake-Cat/2048/blob/master/img/preview.jpeg" width="200">
+  <img src="https://github.com/Fake-Cat/2048/blob/master/img/win.jpeg" width="200">
+  <img src="https://github.com/Fake-Cat/2048/blob/master/img/lose.jpeg" width="200">
 </div>
