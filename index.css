@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    min-width: 60vmin;
+    min-height: 20vmin;
+    margin-bottom: 30px;
+
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-logo {
+    font-size: 8vmin;
+    font-weight: 700;
+    line-height: 200%;
+    color: #fff;
+    background-color: #edc404;
+    padding: 0 20px;
+    border-radius: 10px;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-score {
+    position: relative;
+    text-align: center;
+    background-color: #bbac9f;
+    color: #fff;
+
+    font-size: 2vmin;
+    min-width: 20vmin;
+    height: 10vmin;
+    line-height: 200%;
+    border-radius: 10px;
+
+}
+
+.game-score span {
+    font-size: 4vmin;
+    display: block;
+}
+
+.score-animate {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-weight: 700;
+    font-size: 5vmin;
+    color: rgba(119, 110, 101, 0.9);
+    z-index: 1;
+    animation: move-up 600ms ease-in;
+    animation-fill-mode: both;
+}
+
+@keyframes move-up {
+    0% {
+        top: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        top: -50px;
+        opacity: 0;
+    }
+}
+
+.btn-restart {
+    display: block;
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+    background-color: #fb964c;
+    width: 100%;
+    font-size: 2vmin;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.btn-again {
+    display: block;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-weight:700;
+    color: #fff;
+    border: none;
+    font-size: 2vmin;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #8f7a66;
+}
+.btn-confirm{
+    display: block;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: #333;
+    font-weight:700;
+    border: none;
+    font-size: 2vmin;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.btn-restart:hover {
+    transition: background-color 200ms ease-in-out;
+    background-color: #e56f18;
+}
+
+.btn-again:hover {
+    transition: background-color 200ms ease-in-out;
+    background-color: #675545;
+}
+
+.btn-confirm:hover {
+    transition: background-color 200ms ease-in-out;
+    background-color: #f5d643;
+}
+
+.subtext {
+    display: block;
+    margin-top: 20px;
+    font-size: 2vmin;
+}
+
+.game-board {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 2vmin;
+    row-gap: 2vmin;
+    background-color: #bbac9f;
+    min-width: 60vmin;
+    min-height: 60vmin;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.game-over {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-weight: 700;
+    font-size: 6vmin;
+    z-index: 20;
+    color: #776f66;
+    width: 100%;
+    height: 100%;
+    background: rgba(238, 228, 218, 0.73);
+    border-radius: 20px;
+    animation: new 300ms ease-in-out;
+    transition: 100ms ease-in-out;
+}
+
+.game-win {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-weight: 700;
+    font-size: 9vmin;
+    z-index: 20;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    background: rgb(237 196 4 / 50%); 
+    border-radius: 20px;
+    animation: new 300ms ease-in-out;
+    transition: 100ms ease-in-out;
+}
+
+.cell {
+    display: inline-grid;
+    justify-items: center;
+    align-items: center;
+    font-size: 5vmin;
+    background: #ccc1b3;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    line-height: 200%;
+    border-radius: 10px;
+}
+
+
+.new {
+    animation: new 300ms ease-in-out;
+    transition: 100ms ease-in-out;
+}
+
+
+@keyframes new {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.2)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+.x2 {
+    background-color: #eee4da;
+    color: #727371;
+}
+
+.x4 {
+    background-color: #ece0ca;
+    color: #727371;
+}
+
+.x8 {
+    background-color: #f4b17a;
+}
+
+.x16 {
+    background-color: #f59575;
+}
+
+.x32 {
+    background-color: #f57c5f;
+}
+
+.x64 {
+    background-color: #f65d3b;
+}
+
+.x128 {
+    background-color: #edce71;
+}
+
+.x256 {
+    background-color: #edcc63;
+}
+
+.x512 {
+    background-color: #edc651;
+}
+
+.x1024 {
+    background-color: #eec744;
+}
+
+.x2048 {
+    background-color: #ecc230;
+}
+
+.x4096 {
+    background-color: #fe3d3d;
+}
+
+.x8192 {
+    background-color: #ff2020;
+}
