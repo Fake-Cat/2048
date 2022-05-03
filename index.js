@@ -78,7 +78,7 @@ const generate = () => {
     }
     const randomCell =
         emptyCell[Math.floor(Math.random() * Math.floor(emptyCell.length))];
-    randomCell.innerHTML = Math.random() >= 0.5 ? 2 : 4;
+    randomCell.innerHTML = Math.random() >= 0.3 ? 2 : 4;
 
     update(randomCell, randomCell.innerHTML, true);
 
