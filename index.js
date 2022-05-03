@@ -122,7 +122,7 @@ const update = (cell, value, status) => {
               cell.classList.add('x' + value.toString()))
             : ((cell.classList.value = ''), cell.classList.add('cell'));
     }
-    if (value === 2048) {
+    if (value === 2048 && status) {
         gameWin();
     }
 };
